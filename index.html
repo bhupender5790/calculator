@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="calk.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <h1 class="text-center">calculator using html css javascript</h1>
+    <div class="conatiner flex flex-col  mx-auto m-w-20 items-center">
+        <div class="row">
+                 <input class="input" type="text">
+        </div>
+        <div class="row">
+                <button type="button" style="padding: 20px;" class="btn btn-primary">c</button>
+                <button type="button" style="padding: 20px;" class="btn btn-primary">%</button>
+                <button type="button" style="padding: 20px;" class="btn btn-primary">m+</button>
+                <button type="button" style="padding: 20px;" class="btn btn-primary">m-</button>
+         </div>
+        <div class="row">
+                <button type="button" style="padding: 20px;" class="btn btn-primary">7</button>
+                <button type="button" style="padding: 20px;" class="btn btn-primary">8</button>
+                <button type="button" style="padding: 20px;" class="btn btn-primary">9</button>
+                <button type="button" style="padding: 20px;" class="btn btn-primary">*</button>
+        </div>
+    <div class="conatiner">
+        <div class="row">
+            <button type="button" style="padding: 20px;" class="btn btn-primary">4</button>
+            <button type="button" style="padding: 20px;" class="btn btn-primary">5</button>
+            <button type="button" style="padding: 20px;" class="btn btn-primary">6</button>
+            <button type="button" style="padding: 20px;" class="btn btn-primary">/</button>
+    </div>
+    <div class="conatiner">
+        <div class="row">
+        <button type="button" style="padding: 20px;" class="btn btn-primary">1</button>
+        <button type="button" style="padding: 20px;" class="btn btn-primary">2</button>
+        <button type="button" style="padding: 20px;" class="btn btn-primary">3</button>
+        <button type="button" style="padding: 20px;" class="btn btn-primary">+</button>
+    </div>
+    <div class="conatiner">
+        <div class="row">
+        <button type="button" style="padding: 20px;" class="btn btn-primary">0</button>
+        <button type="button" style="padding: 20px;" class="btn btn-primary">.</button>
+        <button type="button" style="padding: 20px;" class="btn btn-primary">=</button>
+        <button type="button" style="padding: 20px;" class="btn btn-primary">-</button>
+    </div>
+</div>
+<script>
+           
+        let string = "";
+        let buttons = document.getElementsByClassName('btn');
+        console.log(buttons)
+        Array.from(buttons).forEach((button)=>{
+        button.addEventListener('click', (e)=>{
+            if(e.target.innerHTML == '='){
+                string = eval(string);
+                document.querySelector('input').value = string;
+            }
+            else if(e.target.innerHTML == 'c'){
+                string = ""
+                document.querySelector('input').value = string;
+            }
+            
+            else{
+                console.log(e.target);
+                string = string + e.target.innerHTML;
+                document.querySelector('input').value = string;
+            }
+        })
+        
+        })
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap');
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.btn{
+    width: 50px;
+}
+.row{
+    margin: 7px 0;
+   
+    
+    
+}
+.row input{
+   
+    font-size: 19px;
+    margin: 0;
+    padding: 10px 0px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
